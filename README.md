@@ -1,5 +1,6 @@
 # MultiGarmentNetwork
 Repo for **"Multi-Garment Net: Learning to Dress 3D People from Images, ICCV'19"**
+
 Link to paper: https://arxiv.org/abs/1908.06903
 
 
@@ -15,9 +16,9 @@ Download saved weights from : https://1drv.ms/u/s!AohQYySSg0mRmju7Of80mQ09wR5-?e
 
 If you want to process your own data, some pre-processing steps are needed:
 
-1. Crop your images to 720x720.
-2. Run semantic segmentation on images. We used [PGN semantic segmentation](https://github.com/Engineering-Course/CIHP_PGN) and manual correction. Segment garments, Pants (65, 0, 65), Short-Pants (0, 65, 65), Shirt (145, 65, 0), T-Shirt (145, 0, 65), Coat (0, 145, 65).
-3. Run [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) body_25.
+1. Crop your images to 720x720. In our testing setup we used roughly centerd subjects at a distance of around 2m from the camer.
+2. Run semantic segmentation on images. We used [PGN semantic segmentation](https://github.com/Engineering-Course/CIHP_PGN) and manual correction. Segment garments, Pants (65, 0, 65), Short-Pants (0, 65, 65), Shirt (145, 65, 0), T-Shirt (145, 0, 65) and Coat (0, 145, 65).
+3. Run [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) body_25 for 2D joints.
 
 Semantic segmentation and OpenPose keypoints form the input to MGN. See `assets/test_data.pkl` folder for sample data.
 
