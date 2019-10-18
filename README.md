@@ -7,6 +7,11 @@ Link to paper: https://arxiv.org/abs/1908.06903
 ## Pre-requisites
 The code has been tested in python 2.7, Tensorflow 1.13
 
+Download the neutral SMPL model from http://smplify.is.tue.mpg.de/ and place it in the `assets` folder.
+```
+cp <path_to_smplify>/code/models/basicModel_neutral_lbs_10_207_0_v1.0.0.pkl assets/neutral_smpl.pkl
+```
+
 Download and install DIRT: https://github.com/pmh47/dirt.
 
 This repo contains code to run pretrained MGN model.

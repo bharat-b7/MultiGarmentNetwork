@@ -8,7 +8,7 @@ from mesh.geometry import sparse_to_tensor, sparse_dense_matmul_batch_tile
 
 class SmplBody25Layer(tf.keras.Model):
 
-    def __init__(self, model='assets/neutral_smpl_with_cocoplus_reg.pkl', theta_in_rodrigues=False, theta_is_perfect_rotmtx=True, isHres=False, **kwargs):
+    def __init__(self, model='assets/neutral_smpl.pkl', theta_in_rodrigues=False, theta_is_perfect_rotmtx=True, isHres=False, **kwargs):
         super(SmplBody25Layer, self).__init__(**kwargs)
         self.isHres = isHres
         self.smpl = SMPL(model, theta_in_rodrigues, theta_is_perfect_rotmtx, isHres=isHres)
