@@ -1,6 +1,8 @@
 # MultiGarmentNetwork
 Repo for **"Multi-Garment Net: Learning to Dress 3D People from Images, ICCV'19"**
 
+Link to paper: https://arxiv.org/abs/1908.06903
+
 ## Dress SMPL body model with our Digital Wardrobe
 
 1. Download digital wardrobe: https://datasets.d2.mpi-inf.mpg.de/MultiGarmentNetwork/Multi-Garmentdataset.zip
@@ -10,11 +12,7 @@ This dataset contains scans, SMPL registration, texture_maps, segmentation_maps 
 4. dress_SMPL.py: Load random garment and dress desired SMPL body with it
 
 
-
-Link to paper: https://arxiv.org/abs/1908.06903
-
-
-## Pre-requisites
+## Pre-requisites for running MGN
 The code has been tested in python 2.7, Tensorflow 1.13
 
 Download the neutral SMPL model from http://smplify.is.tue.mpg.de/ and place it in the `assets` folder.
