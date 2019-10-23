@@ -1,6 +1,16 @@
 # MultiGarmentNetwork
 Repo for **"Multi-Garment Net: Learning to Dress 3D People from Images, ICCV'19"**
 
+## Dress SMPL body model with our Digital Wardrobe
+
+1. Download digital wardrobe: https://datasets.d2.mpi-inf.mpg.de/MultiGarmentNetwork/Multi-Garmentdataset.zip
+This dataset contains scans, SMPL registration, texture_maps, segmentation_maps and multi-mesh registered garments.
+2. visualize_scan.py: Load scan and visualize texture and segmentation
+3. visualize_garments.py: Visualize random garment and coresponding SMPL model
+4. dress_SMPL.py: Load random garment and dress desired SMPL body with it
+
+
+
 Link to paper: https://arxiv.org/abs/1908.06903
 
 
@@ -13,6 +23,8 @@ cp <path_to_smplify>/code/models/basicModel_neutral_lbs_10_207_0_v1.0.0.pkl asse
 ```
 
 Download and install DIRT: https://github.com/pmh47/dirt.
+
+Download and install mesh packages for visualization: https://github.com/MPI-IS/mesh
 
 This repo contains code to run pretrained MGN model.
 Download saved weights from : https://1drv.ms/u/s!AohQYySSg0mRmju7Of80mQ09wR5-?e=IbbHQ1

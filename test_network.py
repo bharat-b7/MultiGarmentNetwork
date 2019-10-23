@@ -1,3 +1,12 @@
+'''
+This code runs pre-trained MGN.
+
+If you use this code please cite:
+"Multi-Garment Net: Learning to Dress 3D People from Images", ICCV 2019
+
+Code author: Bharat
+'''
+
 import tensorflow as tf
 import numpy as np
 import cPickle as pkl

@@ -254,7 +254,7 @@ class PoseShapeOffsetModel(BaseModel):
         for n in self.config.garmentKeys:
             gn = GarmentNet(self.config.PCA_, n, self.garmparams_sz)
             self.garmentModels.append(gn)
-        self.smpl = SMPL('assets/neutral_smpl_with_cocoplus_reg.pkl',
+        self.smpl = SMPL('assets/neutral_smpl.pkl',
                          theta_in_rodrigues=False, theta_is_perfect_rotmtx=False, isHres=True, scale=True)
         self.smpl_J = SmplBody25Layer(theta_in_rodrigues=False, theta_is_perfect_rotmtx=False, isHres=True)
         self.J_layers = [NameLayer('J_{}'.format(i)) for i in range(NUM)]
