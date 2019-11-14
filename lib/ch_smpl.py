@@ -6,8 +6,8 @@ import chumpy as ch
 import cPickle as pkl
 import scipy.sparse as sp
 from chumpy.ch import Ch
-from psbody.smpl.posemapper import posemap, Rodrigues
-from psbody.smpl.serialization import backwards_compatibility_replacements
+from posemapper import posemap, Rodrigues
+from serialization import backwards_compatibility_replacements
 
 from lib.geometry import laplacian, get_hres
 from lib.ch import sp_dot
@@ -130,7 +130,7 @@ class Smpl(Ch):
 if __name__ == '__main__':
     from utils.smpl_paths import SmplPaths
 
-    dp = SmplPaths(gender='female')
+    dp = SmplPaths(gender='neutral')
 
     smpl = Smpl(dp.get_smpl_file())
 
