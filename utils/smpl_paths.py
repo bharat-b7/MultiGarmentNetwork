@@ -3,8 +3,7 @@ import numpy as np
 from psbody.mesh import Mesh
 from os.path import join
 import cPickle as pkl
-from psbody.smpl import load_model
-from psbody.smpl.serialization import backwards_compatibility_replacements
+from lib.serialization import backwards_compatibility_replacements, load_model
 from utils.geometry import get_hres
 import scipy.sparse as sp
 
