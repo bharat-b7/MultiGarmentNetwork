@@ -11,9 +11,12 @@ Added more garments here [Part-2](https://datasets.d2.mpi-inf.mpg.de/MultiGarmen
 1. Download digital wardrobe: [Part-1](https://datasets.d2.mpi-inf.mpg.de/MultiGarmentNetwork/Multi-Garmentdataset.zip) and [Part-2](https://datasets.d2.mpi-inf.mpg.de/MultiGarmentNetwork/Multi-Garmentdataset_02.zip)
 
 This dataset contains scans, SMPL registration, texture_maps, segmentation_maps and multi-mesh registered garments.
-2. visualize_scan.py: Load scan and visualize texture and segmentation
-3. visualize_garments.py: Visualize random garment and coresponding SMPL model
-4. dress_SMPL.py: Load random garment and dress desired SMPL body with it
+
+2. visualize_scan.py: Load scan and visualize texture and segmentation.
+
+3. visualize_garments.py: Visualize random garment and coresponding SMPL model.
+
+4. dress_SMPL.py: Load random garment and dress desired SMPL body with it.
 
 
 ## Pre-requisites for running MGN
