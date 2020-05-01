@@ -8,8 +8,7 @@ Added more garments here [Part-2](https://datasets.d2.mpi-inf.mpg.de/MultiGarmen
 
 ## Dress SMPL body model with our Digital Wardrobe
 
-1. Download digital wardrobe: [Part-1](https://datasets.d2.mpi-inf.mpg.de/MultiGarmentNetwork/Multi-Garmentdataset.zip) and [Part-2](https://datasets.d2.mpi-inf.mpg.de/MultiGarmentNetwork/Multi-Garmentdataset_02.zip)
-
+1. Download digital wardrobe: [Part-1](https://datasets.d2.mpi-inf.mpg.de/MultiGarmentNetwork/Multi-Garmentdataset.zip) and [Part-2](https://datasets.d2.mpi-inf.mpg.de/MultiGarmentNetwork/Multi-Garmentdataset_02.zip).
 This dataset contains scans, SMPL registration, texture_maps, segmentation_maps and multi-mesh registered garments.
 
 2. visualize_scan.py: Load scan and visualize texture and segmentation.
