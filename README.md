@@ -31,7 +31,7 @@ Download and install DIRT: https://github.com/pmh47/dirt.
 Download and install mesh packages for visualization: https://github.com/MPI-IS/mesh
 
 This repo contains code to run pretrained MGN model.
-Download saved weights from : https://1drv.ms/u/s!AohQYySSg0mRmju7Of80mQ09wR5-?e=IbbHQ1
+Download saved weights from : https://datasets.d2.mpi-inf.mpg.de/MultiGarmentNetwork/weights.zip
 
 ## Data preparation
 
