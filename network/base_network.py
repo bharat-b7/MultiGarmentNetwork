@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-import cPickle as pkl
+import _pickle as pkl
 import matplotlib.pyplot as plt
 
 from config_ver1 import config, NUM, IMG_SIZE, FACE
@@ -209,7 +209,7 @@ class BaseModel(tf.keras.Model):
             self.optimizer = tf.train.AdamOptimizer(learning_rate=self.config.train.lr)
         else:
             self.optimizer = tf.train.AdamOptimizer(0.001)
-        self.vertSpread = pkl.load(open('assets/vert_spread.pkl'))
+        self.vertSpread = pkl.load(open('assets/vert_spread.pkl', 'rb') , encoding='latin1')
         self.garmentModels = []
 
     def save(self, checkpoint_path):

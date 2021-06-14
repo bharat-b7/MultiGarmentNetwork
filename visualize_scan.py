@@ -4,7 +4,7 @@ This loads scan and visualizes segmentation and texture on it
 import os
 from os.path import split, join, exists
 from glob import glob
-import cPickle as pkl
+import _pickle as pkl
 from shutil import copyfile
 from psbody.mesh import Mesh, MeshViewer
 import numpy as np

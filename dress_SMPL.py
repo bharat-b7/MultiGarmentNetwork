@@ -11,7 +11,7 @@ Shout out to Chaitanya for intersection removal code
 
 from psbody.mesh import Mesh, MeshViewers
 import numpy as np
-import cPickle as pkl
+import _pickle as pkl
 from utils.smpl_paths import SmplPaths
 from lib.ch_smpl import Smpl
 from utils.interpenetration_ind import remove_interpenetration_fast
@@ -19,7 +19,7 @@ from os.path import join, split
 from glob import glob
 
 def load_smpl_from_file(file):
-    dat = pkl.load(open(file))
+    dat = pkl.load(open(file, 'rb') , encoding='latin1')
     dp = SmplPaths(gender=dat['gender'])
     smpl_h = Smpl(dp.get_hres_smpl_model_data())
 
@@ -102,7 +102,7 @@ if __name__ == '__main__':
 
     ## This file contains correspondances between garment vertices and smpl body
     fts_file = 'assets/garment_fts.pkl'
-    vert_indices, fts = pkl.load(open(fts_file))
+    vert_indices, fts = pkl.load(open(fts_file, 'rb') , encoding='latin1')
     fts['naked'] = ft
 
     ## Choose any garmet type as source

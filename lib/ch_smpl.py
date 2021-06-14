@@ -3,11 +3,11 @@
 
 import numpy as np
 import chumpy as ch
-import cPickle as pkl
+import _pickle as pkl
 import scipy.sparse as sp
 from chumpy.ch import Ch
-from posemapper import posemap, Rodrigues
-from serialization import backwards_compatibility_replacements
+from .posemapper import posemap, Rodrigues
+from .serialization import backwards_compatibility_replacements
 
 from lib.geometry import laplacian, get_hres
 from lib.ch import sp_dot
@@ -26,7 +26,7 @@ class Smpl(Ch):
     def on_changed(self, which):
         if 'model' in which:
             if not isinstance(self.model, dict):
-                dd = pkl.load(open(self.model))
+                dd = pkl.load(open(self.model, 'rb') , encoding='latin1')
             else:
                 dd = self.model
 

@@ -9,7 +9,7 @@ Code author: Bharat
 
 import tensorflow as tf
 import numpy as np
-import cPickle as pkl
+import _pickle as pkl
 
 from network.base_network import PoseShapeOffsetModel
 from config_ver1 import config, NUM, IMG_SIZE, FACE
@@ -170,7 +170,7 @@ if __name__ == "__main__":
     with open('assets/hresMapping.pkl', 'rb') as f:
         _, faces = pkl.load(f)
 
-    TEMPLATE = pkl.load(open('assets/allTemplate_withBoundaries_symm.pkl', 'rb'))
+    TEMPLATE = pkl.load(open('assets/allTemplate_withBoundaries_symm.pkl', 'rb', 'rb') , encoding='latin1')
     pca_verts = {}
     for garment in config.garmentKeys:
         with open(os.path.join('assets/garment_basis_35_temp20', garment + '_param_{}_corrected.pkl'.format(config.PCA_)), 'rb') as f:
@@ -181,7 +181,7 @@ if __name__ == "__main__":
     m = load_model(model_dir)
 
     ## Load test data
-    dat = pkl.load(open('assets/test_data.pkl'))
+    dat = pkl.load(open('assets/test_data.pkl', 'rb') , encoding='latin1')
 
     ## Get results before optimization
     pred = get_results(m, dat)

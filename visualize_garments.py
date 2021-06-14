@@ -9,7 +9,7 @@ import os
 from os.path import exists, join, split
 from glob import glob
 import numpy as np
-import cPickle as pkl
+import _pickle as pkl
 from psbody.mesh import Mesh, MeshViewer, MeshViewers
 
 from utils.smpl_paths import SmplPaths
@@ -35,7 +35,7 @@ def visualize_garment(garment_path, with_tex = True):
     garment_unposed.set_texture_image(join(path, 'multi_tex.jpg'))
 
     ## Pose garments
-    dat = pkl.load(open(join(path, 'registration.pkl')))
+    dat = pkl.load(open(join(path, 'registration.pkl'), 'rb') , encoding='latin1')
     dat['gender'] = 'neutral'
     garment_posed = pose_garment(garment_unposed, vert_indices[garment_type], dat)
     garment_posed = remove_interpenetration_fast(garment_posed, garment_org_body)
@@ -63,7 +63,7 @@ if __name__ == '__main__':
 
     ## This file contains correspondances between garment vertices and smpl body
     fts_file = 'assets/garment_fts.pkl'
-    vert_indices, fts = pkl.load(open(fts_file))
+    vert_indices, fts = pkl.load(open(fts_file, 'rb') , encoding='latin1')
     fts['naked'] = ft
 
     ## Choose any garmet type

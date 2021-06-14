@@ -1,7 +1,7 @@
 import tensorflow as tf
 
 from batch_smpl import SMPL
-import cPickle as pkl
+import _pickle as pkl
 
 from mesh.geometry import sparse_to_tensor, sparse_dense_matmul_batch_tile
 
@@ -13,7 +13,7 @@ class SmplBody25Layer(tf.keras.Model):
         self.isHres = isHres
         self.smpl = SMPL(model, theta_in_rodrigues, theta_is_perfect_rotmtx, isHres=isHres)
         self.body_25_reg = sparse_to_tensor(
-                pkl.load(open('assets/J_regressor.pkl', 'rb')).T)
+                pkl.load(open('assets/J_regressor.pkl', 'rb', 'rb') , encoding='latin1').T)
 
     def joints_body25(self, v):
         with tf.device('cpu:0'):
