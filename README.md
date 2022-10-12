@@ -47,7 +47,8 @@ Semantic segmentation and OpenPose keypoints form the input to MGN. See `assets/
 
 The following code may be used to stitch a texture for the reconstruction: https://github.com/thmoa/semantic_human_texture_stitching
 
-Cite us:
+## Cite us:
+If you use this code please cite: </br>
 ```
 @inproceedings{bhatnagar2019mgn,
     title = {Multi-Garment Net: Learning to Dress 3D People from Images},
