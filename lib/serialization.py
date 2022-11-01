@@ -16,11 +16,11 @@ Modules included:
   loads the SMPL model from a given file location (i.e. a .pkl file location),
   or a dictionary object.
 '''
-import cPickle as pickle
+import _pickle as pickle
 import numpy as np
 import chumpy as ch
 from chumpy.ch import MatVecMult
-from verts import verts_core
+from .verts import verts_core
 
 def backwards_compatibility_replacements(dd):
     # replacements

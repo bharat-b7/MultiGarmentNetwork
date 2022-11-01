@@ -2,7 +2,7 @@ import os
 import numpy as np
 from psbody.mesh import Mesh
 from os.path import join
-import cPickle as pkl
+import _pickle as pkl
 from lib.serialization import backwards_compatibility_replacements, load_model
 from utils.geometry import get_hres
 import scipy.sparse as sp
@@ -35,7 +35,7 @@ class SmplPaths:
 
     def get_hres_smpl_model_data(self):
 
-        dd = pkl.load(open(self.get_smpl_file()))
+        dd = pkl.load(open(self.get_smpl_file(), 'rb') , encoding='latin1')
         backwards_compatibility_replacements(dd)
 
         hv, hf, mapping = get_hres(dd['v_template'], dd['f'])
@@ -72,7 +72,7 @@ class SmplPaths:
 
     @staticmethod
     def get_vt_ft():
-        vt, ft = pkl.load(open(smpl_vt_ft_path))
+        vt, ft = pkl.load(open(smpl_vt_ft_path, 'rb') , encoding='latin1')
         return vt, ft
 
     @staticmethod
